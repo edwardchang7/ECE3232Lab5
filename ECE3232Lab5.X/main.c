@@ -1,4 +1,20 @@
-#define FCY 4000000UL
+/**
+ * File: main.c
+ * Summary: main code for running "Boop It! Reaction Game".
+ * 
+ * Description: 
+ * "Boop It! Reaction Game" main code, game is played by user 
+ * reacting to LED lights on the boards. 
+ * game consists of 6 game LEDs, 3 difficulty setting LEDs, 2 game buttons, 
+ * 1 difficulty setting button,2 potentiometers, 2 game buttons, and 2 joysticks.
+ * Game uses interrupts from a 4MHz clock timer to count to desired game 
+ * difficulty reaction time setting, being: easy = 5s, normal = 3s, hard = 2s.
+ * 
+ * Authors: Edward Chang, Tully Masterson
+ * Date: March, 19, 2022
+ */
+
+#define FCY 4000000UL   // FCY set to 4MHz
 
 #include "mcc_generated_files/system.h"
 #include "mcc_generated_files/tmr1.h"
@@ -7,6 +23,7 @@
 #include <xc.h>
 #include <libpic30.h>
 
+// global variables declarations and initialization
 bool isTimerOn = false;
 int current_timer = 0;
 int current_difficulty = 1; // easy = 1, normal = 2, hard = 3
@@ -18,6 +35,16 @@ int previousRighthandPotentiometerValue;
 int previousJoystickXAxisValue;
 int previousJoystickYAxisValue;
 
+
+/**
+ * convert a measured voltage from a analog input and converts 
+ * it to a digital representation
+ * 
+ * Author: Edward Chang
+ * 
+ * @param channel - channel to be converted to digital representation
+ * @return converted_digital_value - digital representation of analog input
+ */
 int apply_adc(ADC1_CHANNEL channel) {
     ADC1_Enable();
     ADC1_ChannelSelect(channel);
@@ -32,6 +59,11 @@ int apply_adc(ADC1_CHANNEL channel) {
     return converted_digital_value;
 }
 
+/**
+ * turns off all the LEDs
+ * 
+ * Author: Edward Chang
+ */
 void turnOffAllLEDs() {
     LATCbits.LATC0 = 0; // Turn off Right-hand Button-LED
     LATBbits.LATB7 = 0; // Turn off Left-hand Button-LED
@@ -44,6 +76,11 @@ void turnOffAllLEDs() {
     LATDbits.LATD3 = 0; // Turn off Left-hand Joystick-LED
 }
 
+/**
+ * flash LEDs in a loop 5 times
+ * 
+ * Author: Edward Chang
+ */
 void flashDifficultyLEDs() {
     turnOffAllLEDs();
     __delay_ms(100);
@@ -64,6 +101,11 @@ void flashDifficultyLEDs() {
     }
 }
 
+/**
+ * Set methods for game difficulty
+ * 
+ * Author: Edward Chang
+ */
 void setDifficultyToEasy() {
     LATBbits.LATB14 = 1;
     LATBbits.LATB15 = 0;
@@ -72,7 +114,6 @@ void setDifficultyToEasy() {
     current_difficulty = 1; // easy = 1, normal = 2, hard = 3
     difficulty_timer_value = 5; // easy = 5s, normal = 3s, hard = 2s
 }
-
 void setDifficultyToNormal() {
     LATBbits.LATB14 = 0;
     LATBbits.LATB15 = 1;
@@ -81,7 +122,6 @@ void setDifficultyToNormal() {
     current_difficulty = 2; // easy = 1, normal = 2, hard = 3
     difficulty_timer_value = 3; // easy = 5s, normal = 3s, hard = 2s
 }
-
 void setDifficultyToHard() {
     LATBbits.LATB14 = 0;
     LATBbits.LATB15 = 0;
@@ -100,6 +140,8 @@ void setDifficultyToHard() {
  * 3 = Right-hand Potentiometer
  * 4 = Right-hand Button
  * 5 = Joystick
+ * 
+ * Author: Edward Chang
  */
 int generateRandomAction() {
     int randomNumber = (rand() % 5) + 1;
@@ -134,6 +176,11 @@ int generateRandomAction() {
     return randomNumber;
 }
 
+/**
+ * Stops the game and sets game values to its default states
+ * 
+ * Author: Edward Chang
+ */
 void systemReset() {
     flashDifficultyLEDs();
     setDifficultyToEasy();
@@ -144,6 +191,11 @@ void systemReset() {
     score = 0;
 }
 
+/**
+ * Set pins to desired format
+ * 
+ * Author: Edward Chang
+ */
 void setPins() {
     // AN (Microbus A) - Right-hand Button-LED
     ANSELCbits.ANSELC0 = 0;
@@ -206,6 +258,12 @@ void setPins() {
     TRISDbits.TRISD3 = 0;
 }
 
+/**
+ * Handles Timer interrupts to check is game time has run out
+ * ends game if difficuly_timer_val is passed
+ * 
+ * Author: Edward Chang
+ */
 void Timer1InterruptHandler(void);
 void Timer1InterruptHandler(void) {
     current_timer++;
@@ -215,6 +273,113 @@ void Timer1InterruptHandler(void) {
     }
 }
 
+/**
+ * stop TMR1 and increment score 
+ * 
+ * Author: Edward Chang
+ * Edited: Tully Masterson
+ */
+void success(){
+    TMR1_Stop();
+    score++;
+    current_timer = 0;
+    isTimerOn = false;
+}
+
+/**
+ * change Difficulty setting
+ * 
+ * Author: Edward Chang
+ * Edited: Tully Masterson
+ */
+void changeDifficulty(){
+    TMR1_Stop();
+    isTimerOn = false;
+    current_timer = 0;
+    score = 0;
+    flashDifficultyLEDs();
+
+    switch(current_difficulty) {
+        case 1: // Easy -> Normal
+            setDifficultyToNormal();
+            break;
+        case 2: // Normal -> Hard
+            setDifficultyToHard();
+            break;
+        case 3: // Hard -> Normal
+            setDifficultyToEasy();
+            break;
+    }
+    __delay_ms(1000);
+    continue;
+}
+
+/**
+ * change Difficulty setting
+ * 
+ * Author: Edward Chang
+ * Edited: Tully Masterson
+ */
+void checkForSuccess(int ranAct,
+                    int currentLefthandPotentiometerValue,
+                    int currentRighthandPotentiometerValue,
+                    int currentJoystickXAxisValue,
+                    int currentJoystickYAxisValue){
+    switch(ranAct){
+        case 1:
+            // If the Left-hand Button was "booped" on time...
+            if(PORTBbits.RB2 == 0){
+                LATBbits.LATB7 = 0; // Turn off Left-hand Button-LED
+                success();
+            }
+            break;
+        case 2:
+            // if left potentiometer was moved on time
+            if(currentLefthandPotentiometerValue >= 
+                    previousLefthandPotentiometerValue + 100 ||
+                    currentLefthandPotentiometerValue <= 
+                    previousLefthandPotentiometerValue - 100){
+                LATCbits.LATC13 = 0; // Turn off Left-hand Potentiometer-LED
+                success();      
+            }
+            break;
+        case 3:
+            // if right potentiometer was moved on time
+            if((currentRighthandPotentiometerValue >= 
+                    previousRighthandPotentiometerValue + 100 ||
+                    currentRighthandPotentiometerValue <= 
+                    previousRighthandPotentiometerValue - 100)){
+                LATCbits.LATC14 = 0; // Turn off Right-hand Potentiometer-LED
+                success();
+            }
+            break;
+        case 4:
+            // If the Right-hand Button was "booped" on time...
+            if(PORTCbits.RC7 == 0){
+                LATCbits.LATC0 = 0; // Turn off Right-hand Button-LED
+                success();
+            }
+            break;
+        case 5:
+            // If the joystick was moved on time...
+            if((currentJoystickXAxisValue >= previousJoystickXAxisValue + 100 ||
+                    currentJoystickXAxisValue <= previousJoystickXAxisValue - 100 ||
+                    currentJoystickYAxisValue >= previousJoystickYAxisValue + 100 ||
+                    currentJoystickYAxisValue <= previousJoystickYAxisValue - 100)){
+                LATDbits.LATD3 = 0; // Turn off Left-hand Joystick-LED
+                LATDbits.LATD4 = 0; // Turn off Right-hand Joystick-LED
+                success();
+            }
+            break;    
+    }  
+}
+
+/**
+ * main method
+ * 
+ * Author: Edward Chang
+ * Edited: Tully Masterson
+ */
 int main(void) {
     // Initialize and setup the system
     SYSTEM_Initialize();
@@ -225,90 +390,26 @@ int main(void) {
     
     // Initialize local variables
     int randomAction;
-    
-    int currentLefthandPotentiometerValue;
-    int currentRighthandPotentiometerValue;
-    int currentJoystickXAxisValue;
-    int currentJoystickYAxisValue;
-    
+ 
+    // game loop
     while(1) {
         if(PORTCbits.RC3 == 0) { // If the difficulty button was pressed...
-            TMR1_Stop();
-            isTimerOn = false;
-            current_timer = 0;
-            score = 0;
-            flashDifficultyLEDs();
-            
-            switch(current_difficulty) {
-                case 1: // Easy -> Normal
-                    setDifficultyToNormal();
-                    break;
-                case 2: // Normal -> Hard
-                    setDifficultyToHard();
-                    break;
-                case 3: // Hard -> Normal
-                    setDifficultyToEasy();
-                    break;
-            }
-            
-            __delay_ms(1000);
-            continue;
+            changeDifficulty();
         }
         
-        if(!isTimerOn) { // If Timer1 isn't active or on...
+        // check for success in game if timer is on 
+        // if timer is off generate new randomAction and start timer 
+        if(isTimerOn){
+            checkForSuccess(randomAction,
+                    apply_adc(left_potent), 
+                    apply_adc(right_potent), 
+                    apply_adc(joystick_x_axis), 
+                    apply_adc(joystick_y_axis));
+        }
+        else{
             __delay_ms(3000);
             randomAction = generateRandomAction();
         }
-        
-        currentLefthandPotentiometerValue = apply_adc(left_potent);
-        currentRighthandPotentiometerValue = apply_adc(right_potent);
-        currentJoystickXAxisValue = apply_adc(joystick_x_axis);
-        currentJoystickYAxisValue = apply_adc(joystick_y_axis);
-        
-        if(randomAction == 1 && PORTBbits.RB2 == 0 && isTimerOn) { // If the Left-hand Button was "bopped" on time...
-            TMR1_Stop();
-            LATBbits.LATB7 = 0; // Turn off Left-hand Button-LED
-            score++;
-            current_timer = 0;
-            isTimerOn = false;
-        } else if(randomAction == 2 &&
-                (currentLefthandPotentiometerValue >= previousLefthandPotentiometerValue + 100 ||
-                currentLefthandPotentiometerValue <= previousLefthandPotentiometerValue - 100) &&
-                isTimerOn) { // If the Left-hand Potentiometer was "twisted" on time...
-            TMR1_Stop();
-            LATCbits.LATC13 = 0; // Turn off Left-hand Potentiometer-LED
-            score++;
-            current_timer = 0;
-            isTimerOn = false;
-        } else if(randomAction == 3 &&
-                (currentRighthandPotentiometerValue >= previousRighthandPotentiometerValue + 100 ||
-                currentRighthandPotentiometerValue <= previousRighthandPotentiometerValue - 100) &&
-                isTimerOn) { // If the Right-hand Potentiometer was "twisted" on time...
-            TMR1_Stop();
-            LATCbits.LATC14 = 0; // Turn off Right-hand Potentiometer-LED
-            score++;
-            current_timer = 0;
-            isTimerOn = false;
-        } else if(randomAction == 4 && PORTCbits.RC7 == 0 && isTimerOn) { // If the Right-hand Button was "bopped" on time...
-            TMR1_Stop();
-            LATCbits.LATC0 = 0; // Turn off Right-hand Button-LED
-            score++;
-            current_timer = 0;
-            isTimerOn = false;
-        } else if(randomAction == 5 &&
-                (currentJoystickXAxisValue >= previousJoystickXAxisValue + 100 ||
-                currentJoystickXAxisValue <= previousJoystickXAxisValue - 100 ||
-                currentJoystickYAxisValue >= previousJoystickYAxisValue + 100 ||
-                currentJoystickYAxisValue <= previousJoystickYAxisValue - 100) &&
-                isTimerOn) { // If the joystick was moved on time...
-            TMR1_Stop();
-            LATDbits.LATD3 = 0; // Turn off Left-hand Joystick-LED
-            LATDbits.LATD4 = 0; // Turn off Right-hand Joystick-LED
-            score++;
-            current_timer = 0;
-            isTimerOn = false;
-        }
     }
-    
     return 0; 
 }
