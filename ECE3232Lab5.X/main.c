@@ -315,7 +315,7 @@ void changeDifficulty(){
 }
 
 /**
- * change Difficulty setting
+ * checks the if player reacted to correct input
  * 
  * Author: Edward Chang
  * Edited: Tully Masterson
