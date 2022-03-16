@@ -12,5 +12,5 @@ This project is a remake of [Bop It](https://en.wikipedia.org/wiki/Bop_It).
 4. You may change the difficulty (easy, normal, or hard) at any time by pressing the difficulty button.
 
 # Contributors
-- Edward Chang [LinkedIn](https://www.linkedin.com/in/edwardwonsukchang/)
+- Edward Chang | [LinkedIn](https://www.linkedin.com/in/edwardwonsukchang/)
 - Tully Masterson
