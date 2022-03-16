@@ -1,23 +1,23 @@
 Microchip Technology Inc, v2.00 (B)
 
 Tool Name:
-  h:\program files\microchip\xc16\v2.00\bin\bin\..\bin/elf-ld.exe
+  c:\program files\microchip\xc16\v2.00\bin\bin\..\bin/elf-ld.exe
 
 Command:
   -p33CK256MP506 \
-  --mdfp=H:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/dsPIC33CK-MP_DFP/1.6.176/xc16 \
+  --mdfp=C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/dsPIC33CK-MP_DFP/1.6.176/xc16 \
   -o \
   dist/default/production/ECE3232Lab5.X.production.elf \
-  -Lh:/program files/microchip/xc16/v2.00/bin/bin/.. \
-  -LH:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/dsPIC33CK-MP_DFP/1.6.176/xc16/bin/../support/dsPIC33C/gld \
-  -Lh:/program files/microchip/xc16/v2.00/bin/bin/../../lib \
-  -Lh:/program files/microchip/xc16/v2.00/bin/bin/../../support/PIC24E/gld \
-  -Lh:/program files/microchip/xc16/v2.00/bin/bin/../../support/PIC24F/gld \
-  -Lh:/program files/microchip/xc16/v2.00/bin/bin/../../support/PIC24H/gld \
-  -Lh:/program files/microchip/xc16/v2.00/bin/bin/../../support/dsPIC30F/gld \
-  -Lh:/program files/microchip/xc16/v2.00/bin/bin/../../support/dsPIC33C/gld \
-  -Lh:/program files/microchip/xc16/v2.00/bin/bin/../../support/dsPIC33E/gld \
-  -Lh:/program files/microchip/xc16/v2.00/bin/bin/../../support/dsPIC33F/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/.. \
+  -LC:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/dsPIC33CK-MP_DFP/1.6.176/xc16/bin/../support/dsPIC33C/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../lib \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/PIC24E/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/PIC24F/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/PIC24H/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/dsPIC30F/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/dsPIC33C/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/dsPIC33E/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/dsPIC33F/gld \
   build/default/production/mcc_generated_files/interrupt_manager.o \
   build/default/production/mcc_generated_files/clock.o \
   build/default/production/mcc_generated_files/reset.o \
@@ -56,18 +56,18 @@ Command:
 Optional library libp33CK256MP506.a not found
 Archive member included because of file (symbol)
 
-h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedch.o)
+c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedch.o)
                               (__resetPRI)
-h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(data_init_extendedch.o)
-                              h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedch.o) (__data_init_extended)
-h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalch.Meo)
+c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(data_init_extendedch.o)
+                              c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedch.o) (__data_init_extended)
+c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalch.Meo)
                               (__crt_start_mode_normal)
-h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32ch.Meo)
+c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32ch.Meo)
                               build/default/production/main.o (___delay32)
-h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(rand.CH_o)
+c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(rand.CH_o)
                               build/default/production/main.o (_rand)
-h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
-                              h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(rand.CH_o) (___mulsi3)
+c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
+                              c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(rand.CH_o) (___mulsi3)
 
 
 Selected CodeGuard Options:
@@ -102,13 +102,13 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x2fc           0x47a  (1146)
-.text                        0x4fc               0x902           0xd83  (3459)
-.dinit                       0xdfe                0x38            0x54  (84)
-.text                        0xe36                0x58            0x84  (132)
-.init.delay32                0xe8e                0x1c            0x2a  (42)
-.text                        0xeaa                0x18            0x24  (36)
+.text                        0x4fc               0x954           0xdfe  (3582)
+.dinit                       0xe50                0x38            0x54  (84)
+.text                        0xe88                0x58            0x84  (132)
+.init.delay32                0xee0                0x1c            0x2a  (42)
+.text                        0xefc                0x18            0x24  (36)
 
-                 Total "program" memory used (bytes):         0x1323  (4899) 1%
+                 Total "program" memory used (bytes):         0x139e  (5022) 1%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0x6000]
@@ -178,8 +178,8 @@ External Symbols in Program Memory (by address):
                   0x0004c8                  __DefaultInterrupt
                   0x0004ce                  _srand
                   0x0004d8                  _rand
-                  0x0004f0                  ___mulp32peds3
                   0x0004f0                  ___mulsi3
+                  0x0004f0                  ___mulp32peds3
                   0x0004f0                  ___mulp32eds3
                   0x000620                  _apply_adc
                   0x000656                  _turnOffAllLEDs
@@ -190,72 +190,76 @@ External Symbols in Program Memory (by address):
                   0x0006ea                  _generateRandomAction
                   0x000752                  _systemReset
                   0x000764                  _setPins
-                  0x00079e                  _Timer1InterruptHandler
-                  0x0007b4                  _main
-                  0x00093e                  _ADC1_Initialize
-                  0x000a02                  _ADC1_Core0PowerEnable
-                  0x000a18                  _ADC1_Core1PowerEnable
-                  0x000a2e                  _ADC1_SharedCorePowerEnable
-                  0x000a4a                  _ADC1_SetCommonInterruptHandler
-                  0x000a7a                  _ADC1_Setleft_potentInterruptHandler
-                  0x000aae                  _ADC1_Setright_potentInterruptHandler
-                  0x000ae2                  _ADC1_Setjoystick_x_axisInterruptHandler
-                  0x000b14                  _ADC1_Setjoystick_y_axisInterruptHandler
-                  0x000b46                  _ADC1_Setchannel_AN24InterruptHandler
-                  0x000b5a                  _ADC1_Setchannel_AN25InterruptHandler
-                  0x000b66                  _RESET_GetCause
-                  0x000c8a                  _RESET_CauseClearAll
-                  0x000c92                  _TMR1_Initialize
-                  0x000cb6                  _TMR1_Period16BitSet
-                  0x000cc8                  _TMR1_Period16BitGet
-                  0x000cd0                  _TMR1_Counter16BitSet
-                  0x000ce2                  _TMR1_Counter16BitGet
-                  0x000cf0                  _TMR1_SetInterruptHandler
-                  0x000d00                  _TMR1_Start
-                  0x000d10                  _TMR1_Stop
-                  0x000d1a                  _TMR1_GetElapsedThenClear
-                  0x000d32                  _TMR1_SoftwareCounterGet
-                  0x000d3e                  _TMR1_SoftwareCounterClear
-                  0x000d4a                  _CLOCK_Initialize
-                  0x000da0                  _CLOCK_AuxPllLockStatusGet
-                  0x000db8                  _PIN_MANAGER_Initialize
-                  0x000e54                  _SYSTEM_Initialize
-                  0x000e6a                  _INTERRUPT_Initialize
-                  0x000e8e                  ___delay32
+                  0x0007a4                  _Timer1InterruptHandler
+                  0x0007ba                  _success
+                  0x0007cc                  _changeDifficulty
+                  0x0007fc                  _checkForSuccess
+                  0x0008d6                  _spkOut
+                  0x0008dc                  _main
+                  0x000990                  _ADC1_Initialize
+                  0x000a54                  _ADC1_Core0PowerEnable
+                  0x000a6a                  _ADC1_Core1PowerEnable
+                  0x000a80                  _ADC1_SharedCorePowerEnable
+                  0x000a9c                  _ADC1_SetCommonInterruptHandler
+                  0x000acc                  _ADC1_Setleft_potentInterruptHandler
+                  0x000b00                  _ADC1_Setright_potentInterruptHandler
+                  0x000b34                  _ADC1_Setjoystick_x_axisInterruptHandler
+                  0x000b66                  _ADC1_Setjoystick_y_axisInterruptHandler
+                  0x000b98                  _ADC1_Setchannel_AN24InterruptHandler
+                  0x000bac                  _ADC1_Setchannel_AN25InterruptHandler
+                  0x000bb8                  _RESET_GetCause
+                  0x000cdc                  _RESET_CauseClearAll
+                  0x000ce4                  _TMR1_Initialize
+                  0x000d08                  _TMR1_Period16BitSet
+                  0x000d1a                  _TMR1_Period16BitGet
+                  0x000d22                  _TMR1_Counter16BitSet
+                  0x000d34                  _TMR1_Counter16BitGet
+                  0x000d42                  _TMR1_SetInterruptHandler
+                  0x000d52                  _TMR1_Start
+                  0x000d62                  _TMR1_Stop
+                  0x000d6c                  _TMR1_GetElapsedThenClear
+                  0x000d84                  _TMR1_SoftwareCounterGet
+                  0x000d90                  _TMR1_SoftwareCounterClear
+                  0x000d9c                  _CLOCK_Initialize
+                  0x000df2                  _CLOCK_AuxPllLockStatusGet
+                  0x000e0a                  _PIN_MANAGER_Initialize
+                  0x000ea6                  _SYSTEM_Initialize
+                  0x000ebc                  _INTERRUPT_Initialize
+                  0x000ee0                  ___delay32
                   0x02bf00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x000a02                  _ADC1_Core0PowerEnable
-                  0x000a18                  _ADC1_Core1PowerEnable
-                  0x00093e                  _ADC1_Initialize
-                  0x000a4a                  _ADC1_SetCommonInterruptHandler
-                  0x000b46                  _ADC1_Setchannel_AN24InterruptHandler
-                  0x000b5a                  _ADC1_Setchannel_AN25InterruptHandler
-                  0x000ae2                  _ADC1_Setjoystick_x_axisInterruptHandler
-                  0x000b14                  _ADC1_Setjoystick_y_axisInterruptHandler
-                  0x000a7a                  _ADC1_Setleft_potentInterruptHandler
-                  0x000aae                  _ADC1_Setright_potentInterruptHandler
-                  0x000a2e                  _ADC1_SharedCorePowerEnable
-                  0x000da0                  _CLOCK_AuxPllLockStatusGet
-                  0x000d4a                  _CLOCK_Initialize
-                  0x000e6a                  _INTERRUPT_Initialize
-                  0x000db8                  _PIN_MANAGER_Initialize
-                  0x000c8a                  _RESET_CauseClearAll
-                  0x000b66                  _RESET_GetCause
-                  0x000e54                  _SYSTEM_Initialize
-                  0x000ce2                  _TMR1_Counter16BitGet
-                  0x000cd0                  _TMR1_Counter16BitSet
-                  0x000d1a                  _TMR1_GetElapsedThenClear
-                  0x000c92                  _TMR1_Initialize
-                  0x000cc8                  _TMR1_Period16BitGet
-                  0x000cb6                  _TMR1_Period16BitSet
-                  0x000cf0                  _TMR1_SetInterruptHandler
-                  0x000d3e                  _TMR1_SoftwareCounterClear
-                  0x000d32                  _TMR1_SoftwareCounterGet
-                  0x000d00                  _TMR1_Start
-                  0x000d10                  _TMR1_Stop
-                  0x00079e                  _Timer1InterruptHandler
+                  0x000a54                  _ADC1_Core0PowerEnable
+                  0x000a6a                  _ADC1_Core1PowerEnable
+                  0x000990                  _ADC1_Initialize
+                  0x000a9c                  _ADC1_SetCommonInterruptHandler
+                  0x000b98                  _ADC1_Setchannel_AN24InterruptHandler
+                  0x000bac                  _ADC1_Setchannel_AN25InterruptHandler
+                  0x000b34                  _ADC1_Setjoystick_x_axisInterruptHandler
+                  0x000b66                  _ADC1_Setjoystick_y_axisInterruptHandler
+                  0x000acc                  _ADC1_Setleft_potentInterruptHandler
+                  0x000b00                  _ADC1_Setright_potentInterruptHandler
+                  0x000a80                  _ADC1_SharedCorePowerEnable
+                  0x000df2                  _CLOCK_AuxPllLockStatusGet
+                  0x000d9c                  _CLOCK_Initialize
+                  0x000ebc                  _INTERRUPT_Initialize
+                  0x000e0a                  _PIN_MANAGER_Initialize
+                  0x000cdc                  _RESET_CauseClearAll
+                  0x000bb8                  _RESET_GetCause
+                  0x000ea6                  _SYSTEM_Initialize
+                  0x000d34                  _TMR1_Counter16BitGet
+                  0x000d22                  _TMR1_Counter16BitSet
+                  0x000d6c                  _TMR1_GetElapsedThenClear
+                  0x000ce4                  _TMR1_Initialize
+                  0x000d1a                  _TMR1_Period16BitGet
+                  0x000d08                  _TMR1_Period16BitSet
+                  0x000d42                  _TMR1_SetInterruptHandler
+                  0x000d90                  _TMR1_SoftwareCounterClear
+                  0x000d84                  _TMR1_SoftwareCounterGet
+                  0x000d52                  _TMR1_Start
+                  0x000d62                  _TMR1_Stop
+                  0x0007a4                  _Timer1InterruptHandler
                   0x000396                  __AddressError
                   0x0004c8                  __DefaultInterrupt
                   0x02bf00                  __FSEC.sec
@@ -265,7 +269,7 @@ External Symbols in Program Memory (by name):
                   0x0003f6                  __SoftTrapError
                   0x000374                  __StackError
                   0x00031e                  __T1Interrupt
-                  0x000e8e                  ___delay32
+                  0x000ee0                  ___delay32
                   0x0004f0                  ___mulp32eds3
                   0x0004f0                  ___mulp32peds3
                   0x0004f0                  ___mulsi3
@@ -274,15 +278,19 @@ External Symbols in Program Memory (by name):
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
                   0x000620                  _apply_adc
+                  0x0007cc                  _changeDifficulty
+                  0x0007fc                  _checkForSuccess
                   0x00066e                  _flashDifficultyLEDs
                   0x0006ea                  _generateRandomAction
-                  0x0007b4                  _main
+                  0x0008dc                  _main
                   0x0004d8                  _rand
                   0x0006ae                  _setDifficultyToEasy
                   0x0006d6                  _setDifficultyToHard
                   0x0006c2                  _setDifficultyToNormal
                   0x000764                  _setPins
+                  0x0008d6                  _spkOut
                   0x0004ce                  _srand
+                  0x0007ba                  _success
                   0x000752                  _systemReset
                   0x000656                  _turnOffAllLEDs
 
@@ -326,7 +334,7 @@ LOAD build/default/production/mcc_generated_files/adc1.o
 LOAD build/default/production/main.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD p33CK256MP506
-LOAD h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libfx-elf.a
+LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libfx-elf.a
                     0x801034                  _iwri1 = 0x801034
                     0x801038                  _iwri2 = 0x801038
                     0x801800                  __FBOOT = 0x801800
@@ -362,11 +370,11 @@ LOAD h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libfx-elf.a
 
 .text             0x000200        0x2fc
  *(.init)
- .init            0x000200         0x48 h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedch.o)
+ .init            0x000200         0x48 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedch.o)
                   0x000200                  __resetPRI
                   0x000200                  __reset
                   0x00023c                  __psv_init
- .init            0x000248         0xb2 h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(data_init_extendedch.o)
+ .init            0x000248         0xb2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(data_init_extendedch.o)
                   0x000248                  __data_init
                   0x000248                  __data_init_extended
  *(.user_init)
@@ -393,14 +401,14 @@ LOAD h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libfx-elf.a
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x0004cc          0x2 h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalch.Meo)
+                  0x0004cc          0x2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalch.Meo)
                   0x0004cc                  __crt_start_mode
                   0x0004cc                  __crt_start_mode_normal
- .libc.srand      0x0004ce          0xa h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(rand.CH_o)
+ .libc.srand      0x0004ce          0xa c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(rand.CH_o)
                   0x0004ce                  _srand
- .libc.rand       0x0004d8         0x18 h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(rand.CH_o)
+ .libc.rand       0x0004d8         0x18 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(rand.CH_o)
                   0x0004d8                  _rand
- .libm.mulsi3     0x0004f0          0xc h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
+ .libm.mulsi3     0x0004f0          0xc c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
                   0x0004f0                  ___mulp32peds3
                   0x0004f0                  ___mulsi3
                   0x0004f0                  ___mulp32eds3
@@ -464,21 +472,21 @@ __FBTSEQ
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x8db6
+.debug_info       0x000000       0x9157
  *(.debug_info)
- .debug_info      0x000000        0x291 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_info      0x000291        0x564 build/default/production/mcc_generated_files/clock.o
- .debug_info      0x0007f5        0x47a build/default/production/mcc_generated_files/reset.o
- .debug_info      0x000c6f        0x882 build/default/production/mcc_generated_files/tmr1.o
- .debug_info      0x0014f1       0x1a85 build/default/production/mcc_generated_files/system.o
- .debug_info      0x002f76        0x60d build/default/production/mcc_generated_files/traps.o
- .debug_info      0x003583        0x461 build/default/production/mcc_generated_files/pin_manager.o
- .debug_info      0x0039e4       0x284e build/default/production/mcc_generated_files/adc1.o
- .debug_info      0x006232       0x2af8 build/default/production/main.o
- .debug_info      0x008d2a         0x8c h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
+ .debug_info      0x000000        0x2a8 build/default/production/mcc_generated_files/interrupt_manager.o
+ .debug_info      0x0002a8        0x57b build/default/production/mcc_generated_files/clock.o
+ .debug_info      0x000823        0x491 build/default/production/mcc_generated_files/reset.o
+ .debug_info      0x000cb4        0x899 build/default/production/mcc_generated_files/tmr1.o
+ .debug_info      0x00154d       0x1a9c build/default/production/mcc_generated_files/system.o
+ .debug_info      0x002fe9        0x624 build/default/production/mcc_generated_files/traps.o
+ .debug_info      0x00360d        0x478 build/default/production/mcc_generated_files/pin_manager.o
+ .debug_info      0x003a85       0x2865 build/default/production/mcc_generated_files/adc1.o
+ .debug_info      0x0062ea       0x2de1 build/default/production/main.o
+ .debug_info      0x0090cb         0x8c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x9c1
+.debug_abbrev     0x000000        0xa13
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0x8a build/default/production/mcc_generated_files/interrupt_manager.o
  .debug_abbrev    0x00008a         0xda build/default/production/mcc_generated_files/clock.o
@@ -489,10 +497,10 @@ __FBTSEQ
  .debug_abbrev    0x0004e3        0x10d build/default/production/mcc_generated_files/traps.o
  .debug_abbrev    0x0005f0         0x59 build/default/production/mcc_generated_files/pin_manager.o
  .debug_abbrev    0x000649        0x156 build/default/production/mcc_generated_files/adc1.o
- .debug_abbrev    0x00079f        0x20e build/default/production/main.o
- .debug_abbrev    0x0009ad         0x14 h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
+ .debug_abbrev    0x00079f        0x260 build/default/production/main.o
+ .debug_abbrev    0x0009ff         0x14 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
 
-.debug_line       0x000000        0xdb2
+.debug_line       0x000000        0xdd9
  *(.debug_line)
  .debug_line      0x000000        0x12a build/default/production/mcc_generated_files/interrupt_manager.o
  .debug_line      0x00012a        0x135 build/default/production/mcc_generated_files/clock.o
@@ -503,10 +511,10 @@ __FBTSEQ
  .debug_line      0x0006ac        0x163 build/default/production/mcc_generated_files/traps.o
  .debug_line      0x00080f        0x139 build/default/production/mcc_generated_files/pin_manager.o
  .debug_line      0x000948        0x1d5 build/default/production/mcc_generated_files/adc1.o
- .debug_line      0x000b1d        0x25b build/default/production/main.o
- .debug_line      0x000d78         0x3a h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
+ .debug_line      0x000b1d        0x282 build/default/production/main.o
+ .debug_line      0x000d9f         0x3a c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
 
-.debug_frame      0x000000        0xa42
+.debug_frame      0x000000        0xab4
  *(.debug_frame)
  .debug_frame     0x000000         0x2e build/default/production/mcc_generated_files/interrupt_manager.o
  .debug_frame     0x00002e         0x48 build/default/production/mcc_generated_files/clock.o
@@ -516,9 +524,9 @@ __FBTSEQ
  .debug_frame     0x00037a        0x1bc build/default/production/mcc_generated_files/traps.o
  .debug_frame     0x000536         0x2e build/default/production/mcc_generated_files/pin_manager.o
  .debug_frame     0x000564        0x2f6 build/default/production/mcc_generated_files/adc1.o
- .debug_frame     0x00085a        0x1e8 build/default/production/main.o
+ .debug_frame     0x00085a        0x25a build/default/production/main.o
 
-.debug_str        0x000000        0x673
+.debug_str        0x000000        0x691
  *(.debug_str)
  .debug_str       0x000000         0x13 build/default/production/mcc_generated_files/interrupt_manager.o
  .debug_str       0x000013         0x4e build/default/production/mcc_generated_files/clock.o
@@ -527,7 +535,7 @@ __FBTSEQ
  .debug_str       0x0000aa         0xf2 build/default/production/mcc_generated_files/system.o
  .debug_str       0x00019c         0x24 build/default/production/mcc_generated_files/traps.o
  .debug_str       0x0001c0        0x298 build/default/production/mcc_generated_files/adc1.o
- .debug_str       0x000458        0x21b build/default/production/main.o
+ .debug_str       0x000458        0x239 build/default/production/main.o
 
 .debug_loc
  *(.debug_loc)
@@ -536,7 +544,7 @@ __FBTSEQ
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x7f3
+                  0x000000        0x833
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x2b build/default/production/mcc_generated_files/interrupt_manager.o
@@ -555,7 +563,7 @@ __FBTSEQ
  .debug_pubnames
                   0x000304        0x318 build/default/production/mcc_generated_files/adc1.o
  .debug_pubnames
-                  0x00061c        0x1d7 build/default/production/main.o
+                  0x00061c        0x217 build/default/production/main.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -581,7 +589,7 @@ __FBTSEQ
  .debug_aranges
                   0x0000f0         0x18 build/default/production/main.o
  .debug_aranges
-                  0x000108         0x18 h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
+                  0x000108         0x18 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -4081,9 +4089,9 @@ __FBTSEQ
                     0x0260                  UART2 = 0x260
                     0x0260                  _UART2 = 0x260
 START GROUP
-LOAD h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a
-LOAD h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libm-elf.a
-LOAD h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a
+LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a
+LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libm-elf.a
+LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a
 END GROUP
 OUTPUT(dist/default/production/ECE3232Lab5.X.production.elf elf32-pic30)
 LOAD /CW/_FSEC
@@ -4092,7 +4100,7 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x000120        0xaf3
+                  0x000120        0xb50
  .debug_pubtypes
                   0x000120         0x5b build/default/production/mcc_generated_files/interrupt_manager.o
  .debug_pubtypes
@@ -4110,40 +4118,40 @@ LOAD data_init
  .debug_pubtypes
                   0x0005e6        0x298 build/default/production/mcc_generated_files/adc1.o
  .debug_pubtypes
-                  0x00087e        0x395 build/default/production/main.o
+                  0x00087e        0x3f2 build/default/production/main.o
 
 __c30_signature
-                  0x000c13         0x5a
+                  0x000c70         0x5a
  __c30_signature
-                  0x000c13          0x6 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x000c70          0x6 build/default/production/mcc_generated_files/interrupt_manager.o
  __c30_signature
-                  0x000c19          0x6 build/default/production/mcc_generated_files/clock.o
+                  0x000c76          0x6 build/default/production/mcc_generated_files/clock.o
  __c30_signature
-                  0x000c1f          0x6 build/default/production/mcc_generated_files/reset.o
+                  0x000c7c          0x6 build/default/production/mcc_generated_files/reset.o
  __c30_signature
-                  0x000c25          0x6 build/default/production/mcc_generated_files/mcc.o
+                  0x000c82          0x6 build/default/production/mcc_generated_files/mcc.o
  __c30_signature
-                  0x000c2b          0x6 build/default/production/mcc_generated_files/tmr1.o
+                  0x000c88          0x6 build/default/production/mcc_generated_files/tmr1.o
  __c30_signature
-                  0x000c31          0x6 build/default/production/mcc_generated_files/system.o
+                  0x000c8e          0x6 build/default/production/mcc_generated_files/system.o
  __c30_signature
-                  0x000c37          0x6 build/default/production/mcc_generated_files/traps.o
+                  0x000c94          0x6 build/default/production/mcc_generated_files/traps.o
  __c30_signature
-                  0x000c3d          0x6 build/default/production/mcc_generated_files/pin_manager.o
+                  0x000c9a          0x6 build/default/production/mcc_generated_files/pin_manager.o
  __c30_signature
-                  0x000c43          0x6 build/default/production/mcc_generated_files/adc1.o
+                  0x000ca0          0x6 build/default/production/mcc_generated_files/adc1.o
  __c30_signature
-                  0x000c49          0x6 build/default/production/main.o
+                  0x000ca6          0x6 build/default/production/main.o
  __c30_signature
-                  0x000c4f          0x6 h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedch.o)
+                  0x000cac          0x6 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedch.o)
  __c30_signature
-                  0x000c55          0x6 h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(data_init_extendedch.o)
+                  0x000cb2          0x6 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(data_init_extendedch.o)
  __c30_signature
-                  0x000c5b          0x6 h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32ch.Meo)
+                  0x000cb8          0x6 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32ch.Meo)
  __c30_signature
-                  0x000c61          0x6 h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(rand.CH_o)
+                  0x000cbe          0x6 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(rand.CH_o)
  __c30_signature
-                  0x000c67          0x6 h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
+                  0x000cc4          0x6 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.CH_o)
 
 .nbss               0x1000         0x1c
  .nbss              0x1000          0xe build/default/production/mcc_generated_files/adc1.o
@@ -4170,7 +4178,7 @@ __c30_signature
 
 .bss                0x1024         0x26
  .bss               0x1024         0x20 build/default/production/mcc_generated_files/traps.o
- .bss               0x1044          0x4 h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(rand.CH_o)
+ .bss               0x1044          0x4 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(rand.CH_o)
  .bss               0x1048          0x2 build/default/production/mcc_generated_files/tmr1.o
 
 .ivt._T1Interrupt
@@ -4280,8 +4288,8 @@ __c30_signature
  .ivt._ADCAN25Interrupt
                   0x000196          0x2 build/default/production/mcc_generated_files/adc1.o
 
-.text             0x0004fc        0x902
- .text            0x0004fc        0x442 build/default/production/main.o
+.text             0x0004fc        0x954
+ .text            0x0004fc        0x494 build/default/production/main.o
                   0x000620                  _apply_adc
                   0x000656                  _turnOffAllLEDs
                   0x00066e                  _flashDifficultyLEDs
@@ -4291,68 +4299,72 @@ __c30_signature
                   0x0006ea                  _generateRandomAction
                   0x000752                  _systemReset
                   0x000764                  _setPins
-                  0x00079e                  _Timer1InterruptHandler
-                  0x0007b4                  _main
- .text            0x00093e        0x228 build/default/production/mcc_generated_files/adc1.o
-                  0x00093e                  _ADC1_Initialize
-                  0x000a02                  _ADC1_Core0PowerEnable
-                  0x000a18                  _ADC1_Core1PowerEnable
-                  0x000a2e                  _ADC1_SharedCorePowerEnable
-                  0x000a44                  _ADC1_CallBack
-                  0x000a4a                  _ADC1_SetCommonInterruptHandler
-                  0x000a56                  _ADC1_Tasks
-                  0x000a72                  _ADC1_left_potent_CallBack
-                  0x000a7a                  _ADC1_Setleft_potentInterruptHandler
-                  0x000a86                  _ADC1_left_potent_Tasks
-                  0x000aa6                  _ADC1_right_potent_CallBack
-                  0x000aae                  _ADC1_Setright_potentInterruptHandler
-                  0x000aba                  _ADC1_right_potent_Tasks
-                  0x000ada                  _ADC1_joystick_x_axis_CallBack
-                  0x000ae2                  _ADC1_Setjoystick_x_axisInterruptHandler
-                  0x000aee                  _ADC1_joystick_x_axis_Tasks
-                  0x000b0c                  _ADC1_joystick_y_axis_CallBack
-                  0x000b14                  _ADC1_Setjoystick_y_axisInterruptHandler
-                  0x000b20                  _ADC1_joystick_y_axis_Tasks
-                  0x000b3e                  _ADC1_channel_AN24_CallBack
-                  0x000b46                  _ADC1_Setchannel_AN24InterruptHandler
-                  0x000b52                  _ADC1_channel_AN25_CallBack
-                  0x000b5a                  _ADC1_Setchannel_AN25InterruptHandler
- .text            0x000b66        0x12c build/default/production/mcc_generated_files/reset.o
-                  0x000b66                  _RESET_GetCause
-                  0x000b6e                  _RESET_CauseHandler
-                  0x000c8a                  _RESET_CauseClearAll
- .text            0x000c92         0xb8 build/default/production/mcc_generated_files/tmr1.o
-                  0x000c92                  _TMR1_Initialize
-                  0x000cb6                  _TMR1_Period16BitSet
-                  0x000cc8                  _TMR1_Period16BitGet
-                  0x000cd0                  _TMR1_Counter16BitSet
-                  0x000ce2                  _TMR1_Counter16BitGet
-                  0x000cea                  _TMR1_CallBack
-                  0x000cf0                  _TMR1_SetInterruptHandler
-                  0x000d00                  _TMR1_Start
-                  0x000d10                  _TMR1_Stop
-                  0x000d1a                  _TMR1_GetElapsedThenClear
-                  0x000d32                  _TMR1_SoftwareCounterGet
-                  0x000d3e                  _TMR1_SoftwareCounterClear
- .text            0x000d4a         0x6e build/default/production/mcc_generated_files/clock.o
-                  0x000d4a                  _CLOCK_Initialize
-                  0x000da0                  _CLOCK_AuxPllLockStatusGet
- .text            0x000db8         0x46 build/default/production/mcc_generated_files/pin_manager.o
-                  0x000db8                  _PIN_MANAGER_Initialize
+                  0x0007a4                  _Timer1InterruptHandler
+                  0x0007ba                  _success
+                  0x0007cc                  _changeDifficulty
+                  0x0007fc                  _checkForSuccess
+                  0x0008d6                  _spkOut
+                  0x0008dc                  _main
+ .text            0x000990        0x228 build/default/production/mcc_generated_files/adc1.o
+                  0x000990                  _ADC1_Initialize
+                  0x000a54                  _ADC1_Core0PowerEnable
+                  0x000a6a                  _ADC1_Core1PowerEnable
+                  0x000a80                  _ADC1_SharedCorePowerEnable
+                  0x000a96                  _ADC1_CallBack
+                  0x000a9c                  _ADC1_SetCommonInterruptHandler
+                  0x000aa8                  _ADC1_Tasks
+                  0x000ac4                  _ADC1_left_potent_CallBack
+                  0x000acc                  _ADC1_Setleft_potentInterruptHandler
+                  0x000ad8                  _ADC1_left_potent_Tasks
+                  0x000af8                  _ADC1_right_potent_CallBack
+                  0x000b00                  _ADC1_Setright_potentInterruptHandler
+                  0x000b0c                  _ADC1_right_potent_Tasks
+                  0x000b2c                  _ADC1_joystick_x_axis_CallBack
+                  0x000b34                  _ADC1_Setjoystick_x_axisInterruptHandler
+                  0x000b40                  _ADC1_joystick_x_axis_Tasks
+                  0x000b5e                  _ADC1_joystick_y_axis_CallBack
+                  0x000b66                  _ADC1_Setjoystick_y_axisInterruptHandler
+                  0x000b72                  _ADC1_joystick_y_axis_Tasks
+                  0x000b90                  _ADC1_channel_AN24_CallBack
+                  0x000b98                  _ADC1_Setchannel_AN24InterruptHandler
+                  0x000ba4                  _ADC1_channel_AN25_CallBack
+                  0x000bac                  _ADC1_Setchannel_AN25InterruptHandler
+ .text            0x000bb8        0x12c build/default/production/mcc_generated_files/reset.o
+                  0x000bb8                  _RESET_GetCause
+                  0x000bc0                  _RESET_CauseHandler
+                  0x000cdc                  _RESET_CauseClearAll
+ .text            0x000ce4         0xb8 build/default/production/mcc_generated_files/tmr1.o
+                  0x000ce4                  _TMR1_Initialize
+                  0x000d08                  _TMR1_Period16BitSet
+                  0x000d1a                  _TMR1_Period16BitGet
+                  0x000d22                  _TMR1_Counter16BitSet
+                  0x000d34                  _TMR1_Counter16BitGet
+                  0x000d3c                  _TMR1_CallBack
+                  0x000d42                  _TMR1_SetInterruptHandler
+                  0x000d52                  _TMR1_Start
+                  0x000d62                  _TMR1_Stop
+                  0x000d6c                  _TMR1_GetElapsedThenClear
+                  0x000d84                  _TMR1_SoftwareCounterGet
+                  0x000d90                  _TMR1_SoftwareCounterClear
+ .text            0x000d9c         0x6e build/default/production/mcc_generated_files/clock.o
+                  0x000d9c                  _CLOCK_Initialize
+                  0x000df2                  _CLOCK_AuxPllLockStatusGet
+ .text            0x000e0a         0x46 build/default/production/mcc_generated_files/pin_manager.o
+                  0x000e0a                  _PIN_MANAGER_Initialize
 
-.dinit            0x000dfe         0x38
- .dinit           0x000dfe         0x38 data_init
+.dinit            0x000e50         0x38
+ .dinit           0x000e50         0x38 data_init
 
-.text             0x000e36         0x58
- .text            0x000e36         0x34 build/default/production/mcc_generated_files/system.o
-                  0x000e54                  _SYSTEM_Initialize
- .text            0x000e6a         0x24 build/default/production/mcc_generated_files/interrupt_manager.o
-                  0x000e6a                  _INTERRUPT_Initialize
+.text             0x000e88         0x58
+ .text            0x000e88         0x34 build/default/production/mcc_generated_files/system.o
+                  0x000ea6                  _SYSTEM_Initialize
+ .text            0x000ebc         0x24 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x000ebc                  _INTERRUPT_Initialize
 
-.init.delay32     0x000e8e         0x1c
- .init.delay32    0x000e8e         0x1c h:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32ch.Meo)
-                  0x000e8e                  ___delay32
+.init.delay32     0x000ee0         0x1c
+ .init.delay32    0x000ee0         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32ch.Meo)
+                  0x000ee0                  ___delay32
 
-.text             0x000eaa         0x18
- .text            0x000eaa         0x18 build/default/production/mcc_generated_files/traps.o
-                  0x000eaa                  _TRAPS_halt_on_error
+.text             0x000efc         0x18
+ .text            0x000efc         0x18 build/default/production/mcc_generated_files/traps.o
+                  0x000efc                  _TRAPS_halt_on_error

@@ -256,6 +256,14 @@ void setPins() {
     
     // SCL (Microbus A) - Left-hand Joystick-LED
     TRISDbits.TRISD3 = 0;
+    
+    // SPK_ENABLE - Enable for speaker set as output
+    TRISDbits.TRISD15 = 0;
+    
+    // SPK_OUT - speaker output set as input
+    ANSELAbits.ANSELA3 = 1;
+    TRISAbits.TRISA3 = 1;
+    
 }
 
 /**
@@ -311,7 +319,6 @@ void changeDifficulty(){
             break;
     }
     __delay_ms(1000);
-    continue;
 }
 
 /**
@@ -374,6 +381,10 @@ void checkForSuccess(int ranAct,
     }  
 }
 
+void spkOut(){
+    
+}
+
 /**
  * main method
  * 
@@ -387,28 +398,53 @@ int main(void) {
     setPins();
     turnOffAllLEDs();
     setDifficultyToEasy();
+    bool testing = true;
+//    uint16_t high = 
     
     // Initialize local variables
     int randomAction;
- 
-    // game loop
-    while(1) {
-        if(PORTCbits.RC3 == 0) { // If the difficulty button was pressed...
-            changeDifficulty();
+    
+    if(testing){
+         LATDbits.LATD15 = 0;       // Enable Speaker(enabled on low);
+         //TMR1_Start();            // Start timer
+         //isTimerOn = true;        // timer on
+         int count = 0;
+        while(count < 10){          // 10 loops
+             LATAbits.LATA3 = 0x0000;    // SPK_OUT high
+             __delay_ms(2000);      // wait 2 seconds
+             LATAbits.LATA3 = 0x1000;    // SPK_OUT low
+             __delay_ms(2000);
+             LATAbits.LATA3 = 0x0001;    // SPK_OUT high
+             __delay_ms(2000);
+             LATAbits.LATA3 = 0x0011;    // SPK_OUT high
+             __delay_ms(2000);
+             LATAbits.LATA3 = 0x0111;    // SPK_OUT high
+             __delay_ms(2000);
+             count++;
+             
         }
-        
-        // check for success in game if timer is on 
-        // if timer is off generate new randomAction and start timer 
-        if(isTimerOn){
-            checkForSuccess(randomAction,
-                    apply_adc(left_potent), 
-                    apply_adc(right_potent), 
-                    apply_adc(joystick_x_axis), 
-                    apply_adc(joystick_y_axis));
-        }
+    }
         else{
-            __delay_ms(3000);
-            randomAction = generateRandomAction();
+        // game loop
+        while(1) {
+            if(PORTCbits.RC3 == 0) { // If the difficulty button was pressed...
+                changeDifficulty();
+                continue;
+            }
+
+            // check for success in game if timer is on 
+            // if timer is off generate new randomAction and start timer 
+            if(isTimerOn){
+                checkForSuccess(randomAction,
+                        apply_adc(left_potent), 
+                        apply_adc(right_potent), 
+                        apply_adc(joystick_x_axis), 
+                        apply_adc(joystick_y_axis));
+            }
+            else{
+                __delay_ms(3000);
+                randomAction = generateRandomAction();
+            }
         }
     }
     return 0; 
