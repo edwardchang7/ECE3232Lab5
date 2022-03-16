@@ -1,1 +1,3 @@
-# ECE3232Lab5
+<p align="center">
+    # ECE3232 Lab 5
+</p>
