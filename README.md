@@ -15,7 +15,7 @@ This project is a remake of [Bop It](https://en.wikipedia.org/wiki/Bop_It).
 1. At least two digital inputs and two digital outputs.
     - This system has two buttons (which fulfills the requirement of two digital inputs), and nine different LEDs (which fulfills the requirement of two digital outputs).
 2. At least one maskable interrupt (traps such as MathError do not count, though you are encouraged to use these for debugging, etc.).
-    - This system enables and uses the Timer1 Interrupt. The custom Timer1 Interrupt function used in this sytem can be seen [here](https://github.com/edwardchang7/ECE3232Lab5/blob/12cfb4f01e3da6e94781947da125da4091cae131/ECE3232Lab5.X/main.c#L209).
+    - This system enables and uses the Timer1 Interrupt. The custom Timer1 Interrupt function used in this sytem can be seen [here](https://github.com/edwardchang7/ECE3232Lab5/blob/12cfb4f01e3da6e94781947da125da4091cae131/ECE3232Lab5.X/main.c#L209). The custom Timer1 Interrupt function is passed onto the Timer1 module using the Timer1 module's [TMR1_SetInterruptHandler() function](https://github.com/edwardchang7/ECE3232Lab5/blob/2f87466221cae17f1e8918ed7596e499af5d830e/ECE3232Lab5.X/main.c#L221) to replace its existing interrupt handler function.
 3. Use of the internal FRC with a divided clock frequency, i.e., a lower clock frequency than was used in Labs 1-3
     - The internal FRC clock is set to its default 8 MHz value. However, this system uses the Fosc value that is generated from the internal FRC clock. More specifically, the value of Fosc/2 is what the Timer1 module uses to drive its timer functionality.
 4. At least one timer, e.g., using Timer 1 or the SCCP/MCCP timer modules.
@@ -27,7 +27,7 @@ This project is a remake of [Bop It](https://en.wikipedia.org/wiki/Bop_It).
 5. At least three difficulty levels, e.g., normal, easy, and hard.
     - The system's difficulty button can be pressed to change the difficulty of the game.
 6. Assuming your design meets the above requirements, bonus marks will be awarded if your design incorporates an analog input, an analog output, or a serial interface (+10% each).
-    - Analog input = Two potentiometers + One joystick (ADC)
+    - Analog input = Two potentiometers + One joystick (ADC is used to get the input of these analog pins)
 
 # Contributors
 - Edward Chang | [LinkedIn](https://www.linkedin.com/in/edwardwonsukchang/)
