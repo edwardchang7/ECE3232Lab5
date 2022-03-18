@@ -11,7 +11,7 @@ This project is a remake of [Bop It](https://en.wikipedia.org/wiki/Bop_It).
 3. Depending on the difficulty chosen, you must do so within either 5 seconds (easy mode), 3 seconds (normal mode), or 1 second (hard mode). If you fail to "bop", "twist", or "pull" within the time limit, the system will be reset and the difficulty will be changed back to easy mode.
 4. You may change the difficulty (easy, normal, or hard) at any time by holding the difficulty button until the three difficulty LEDs flash. Once the three difficulty LEDs flash, you may let go of the difficulty button.
 
-# Requirements
+# How Requirements Are Satisfied
 1. At least two digital inputs and two digital outputs.
     - This system has two buttons (which fulfills the requirement of two digital inputs), and nine different LEDs (which fulfills the requirement of two digital outputs).
 2. At least one maskable interrupt (traps such as MathError do not count, though you are encouraged to use these for debugging, etc.).
