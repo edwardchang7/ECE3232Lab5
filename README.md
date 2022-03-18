@@ -19,6 +19,7 @@ This project is a remake of [Bop It](https://en.wikipedia.org/wiki/Bop_It).
     - ![Image](https://i.imgur.com/Tz2tdlz.png)
     - However, this system uses the Fosc value that is generated from the internal FRC clock. More specifically, the value of Fosc/2 is what the Timer1 module really uses to execute its timer functionalities:
     - ![Image](https://i.imgur.com/PHEMyIo.png)
+    - Therefore, the custom Timer1 Interrupt function is executed every one second.
 4. **At least one timer, e.g., using Timer 1 or the SCCP/MCCP timer modules.**
     - This system uses one Timer1 module as shown in the picture above.
         - Clock source = Fosc/2 (4 MHz)
