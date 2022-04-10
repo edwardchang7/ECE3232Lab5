@@ -34,3 +34,6 @@ This project is a remake of [Bop It](https://en.wikipedia.org/wiki/Bop_It).
 ## Contributors
 - Edward Chang | [LinkedIn](https://www.linkedin.com/in/edwardwonsukchang/)
 - Tully Masterson
+
+## Demo (Click on the picture)
+[![Watch the video](https://i.imgur.com/pM33V2b.jpg)](https://streamable.com/ojeva9)
